@@ -8,16 +8,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./login";
 import Home from "./home";
 import Cadastro from "./cadastro";
-
-import firebase from "firebase";
-import firebaseConfig from "./config";
+import Linguagens from "./linguagens";
+import Ingles from "./ingles";
 
 const Stack = createStackNavigator();
 
 const Routes = () => {
-  useEffect(() => {
-    firebase.initializeApp(firebaseConfig);
-  }, []);
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -46,6 +42,30 @@ const Routes = () => {
           name="Cadastro"
           options={{
             headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          component={Linguagens}
+          name="Linguagens"
+          options={{
+            title: "Linguagens e suas Tecnologias",
+            headerStyle: {
+              backgroundColor: "#fc7e2f",
+            },
+            headerLeft: null,
+            headerTintColor: "#fff",
+          }}
+        />
+        <Stack.Screen
+          component={Ingles}
+          name="Ingles"
+          options={{
+            title: "Língua Estrangeira (Inglês)",
+            headerStyle: {
+              backgroundColor: "#fc7e2f",
+            },
+            headerLeft: null,
+            headerTintColor: "#fff",
           }}
         />
       </Stack.Navigator>
