@@ -11,7 +11,8 @@ import {
   FlatList,
   Linking,
 } from "react-native";
-const Ingles = () => {
+
+const Ingles = ({ navigation }) => {
   const courses = [
     {
       title: "Curso de Inglês Busuu",
@@ -36,7 +37,7 @@ const Ingles = () => {
   ];
   const [datas, setDatas] = useState(courses);
   async function openLink(link) {
-    Linking.openURL(link);
+    navigation.navigate("Content", { uri: link });
   }
   return (
     <SafeAreaView style={styles.container}>
@@ -53,9 +54,7 @@ const Ingles = () => {
             style={styles.content}
             onPress={() => openLink(item.link)}
           >
-            <View style={styles.item}>
-              <Text style={styles.itemText}>{item.title}</Text>
-            </View>
+            <Text style={styles.itemText}>{item.title}</Text>
           </TouchableOpacity>
         )}
       />
@@ -86,8 +85,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     width: screenWidth - 50,
-  },
-  item: {
     alignSelf: "stretch",
     padding: 20,
     borderRadius: 8,

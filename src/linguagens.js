@@ -12,6 +12,7 @@ import {
   Image,
   ScrollView,
 } from "react-native";
+import illustration1 from "./assets/illustration1.png";
 const Linguagens = ({ navigation }) => {
   function openSection(created) {
     if (created) {
@@ -22,45 +23,36 @@ const Linguagens = ({ navigation }) => {
   }
   return (
     <SafeAreaView style={styles.container}>
+      <Image source={illustration1} style={styles.image} />
       <TouchableOpacity
         style={styles.content}
         onPress={() => openSection(false)}
       >
-        <View style={styles.item}>
-          <Text style={styles.itemText}>Língua Portuguesa</Text>
-        </View>
+        <Text style={styles.itemText}>Língua Portuguesa</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.content}
         onPress={() => openSection(false)}
       >
-        <View style={styles.item}>
-          <Text style={styles.itemText}>Literatura</Text>
-        </View>
+        <Text style={styles.itemText}>Literatura</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.content}
         onPress={() => openSection(true)}
       >
-        <View style={styles.item}>
-          <Text style={styles.itemText}>Língua Estrangeira (inglês)</Text>
-        </View>
+        <Text style={styles.itemText}>Língua Estrangeira (inglês)</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.content}
         onPress={() => openSection(false)}
       >
-        <View style={styles.item}>
-          <Text style={styles.itemText}>Língua Estrangeira (espanhol)</Text>
-        </View>
+        <Text style={styles.itemText}>Língua Estrangeira (espanhol)</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.content}
         onPress={() => openSection(false)}
       >
-        <View style={styles.item}>
-          <Text style={styles.itemText}>Artes</Text>
-        </View>
+        <Text style={styles.itemText}>Artes</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -88,8 +80,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
     alignItems: "center",
     justifyContent: "center",
-  },
-  item: {
     width: screenWidth - 50,
     padding: 20,
     borderRadius: 8,
@@ -107,8 +97,13 @@ const styles = StyleSheet.create({
   itemText: {
     color: "#fff",
     fontWeight: "bold",
-    fontSize: 20,
+    fontSize: 15,
     textTransform: "uppercase",
+  },
+  image: {
+    width: screenWidth - 30,
+    height: 150,
+    resizeMode: "contain",
   },
 });
 export default Linguagens;

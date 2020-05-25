@@ -16,7 +16,8 @@
     },
     "assetBundlePatterns": ["**/*"],
     "android": {
-      "package": "com.hackinghelp.EducAccess"
+      "package": "com.hackinghelp.EducAccess",
+      "versionCode": 3
     }
   }
 }

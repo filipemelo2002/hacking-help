@@ -10,6 +10,7 @@ import Home from "./home";
 import Cadastro from "./cadastro";
 import Linguagens from "./linguagens";
 import Ingles from "./ingles";
+import Content from "./content";
 
 const Stack = createStackNavigator();
 
@@ -30,11 +31,10 @@ const Routes = () => {
           options={{
             title: "Seja Bem-Vindo(a)",
             headerStyle: {
-              backgroundColor: "#fc7e2f",
+              backgroundColor: "#3199be",
             },
             headerLeft: null,
             headerTintColor: "#fff",
-            headerTitleStyle: {},
           }}
         />
         <Stack.Screen
@@ -50,9 +50,8 @@ const Routes = () => {
           options={{
             title: "Linguagens e suas Tecnologias",
             headerStyle: {
-              backgroundColor: "#fc7e2f",
+              backgroundColor: "#3199be",
             },
-            headerLeft: null,
             headerTintColor: "#fff",
           }}
         />
@@ -62,9 +61,19 @@ const Routes = () => {
           options={{
             title: "Língua Estrangeira (Inglês)",
             headerStyle: {
-              backgroundColor: "#fc7e2f",
+              backgroundColor: "#3199be",
             },
-            headerLeft: null,
+            headerTintColor: "#fff",
+          }}
+        />
+        <Stack.Screen
+          component={Content}
+          name="Content"
+          options={{
+            title: "",
+            headerStyle: {
+              backgroundColor: "#3199be",
+            },
             headerTintColor: "#fff",
           }}
         />

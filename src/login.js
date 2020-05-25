@@ -10,7 +10,9 @@ import {
   TouchableOpacity,
   SafeAreaView,
   StyleSheet,
+  Image,
 } from "react-native";
+import logo from "./assets/logo.png";
 const Login = ({ navigation }) => {
   function signUp() {
     navigation.navigate("Cadastro");
@@ -20,6 +22,7 @@ const Login = ({ navigation }) => {
   }
   return (
     <SafeAreaView style={styles.container}>
+      <Image source={logo} style={styles.logo} />
       <View style={styles.content}>
         <Text style={styles.title}>Faça seu Logon</Text>
         <TextInput placeholder="E-Mail" style={styles.input} />
@@ -79,7 +82,7 @@ const styles = StyleSheet.create({
     padding: 10,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#fc7e2f",
+    backgroundColor: "#3199be",
   },
   buttonText: {
     fontSize: 20,
@@ -90,6 +93,10 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
     color: "#3d3d3d",
     fontSize: 15,
+  },
+  logo: {
+    width: 200,
+    resizeMode: "contain",
   },
 });
 

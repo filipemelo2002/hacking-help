@@ -36,39 +36,44 @@ const Home = ({ navigation }) => {
             padding: 5,
           }}
         >
-          <TouchableOpacity onPress={() => openSection(true)}>
-            <View style={styles.content}>
-              <Image source={illustration1} style={styles.img} />
-              <Text style={styles.title}>Linguagens e suas tecnologias</Text>
-            </View>
+          <TouchableOpacity
+            onPress={() => openSection(true)}
+            style={styles.content}
+          >
+            <Image source={illustration1} style={styles.img} />
+            <Text style={styles.title}>Linguagens e suas tecnologias</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => openSection(false)}>
-            <View style={styles.content}>
-              <Image source={illustration2} style={styles.img} />
-              <Text style={styles.title}>Matemática e suas tecnologias</Text>
-            </View>
+          <TouchableOpacity
+            onPress={() => openSection(false)}
+            style={styles.content}
+          >
+            <Image source={illustration2} style={styles.img} />
+            <Text style={styles.title}>Matemática e suas tecnologias</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => openSection(false)}>
-            <View style={styles.content}>
-              <Image source={illustration3} style={styles.img} />
-              <Text style={styles.title}>
-                Ciência da Natureza e suas Tecnologias
-              </Text>
-            </View>
+          <TouchableOpacity
+            onPress={() => openSection(false)}
+            style={styles.content}
+          >
+            <Image source={illustration3} style={styles.img} />
+            <Text style={styles.title}>
+              Ciência da Natureza e suas Tecnologias
+            </Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => openSection(false)}>
-            <View style={styles.content}>
-              <Image source={illustration} style={styles.img} />
-              <Text style={styles.title}>
-                Ciências Humanas e suas tecnologias
-              </Text>
-            </View>
+          <TouchableOpacity
+            onPress={() => openSection(false)}
+            style={styles.content}
+          >
+            <Image source={illustration} style={styles.img} />
+            <Text style={styles.title}>
+              Ciências Humanas e suas tecnologias
+            </Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => openSection(false)}>
-            <View style={styles.content}>
-              <Image source={illustration4} style={styles.img} />
-              <Text style={styles.title}>Redação</Text>
-            </View>
+          <TouchableOpacity
+            onPress={() => openSection(false)}
+            style={styles.content}
+          >
+            <Image source={illustration4} style={styles.img} />
+            <Text style={styles.title}>Redação</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
